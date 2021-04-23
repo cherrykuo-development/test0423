@@ -42,7 +42,9 @@ body {
             setBodyHeight();
             window.onresize = setBodyHeight;
             window.addEventListener('orientationchange', () => {
-                alert('cherry');
+                var ua = navigator.userAgent;
+                alert('is Chrome ? ' + /Chrome/i.test(ua));
+                // alert('cherry');
             })
         });
     </script>
