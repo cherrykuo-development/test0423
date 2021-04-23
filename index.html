@@ -21,7 +21,7 @@ html {
     background-color: red;
 }
 body {
-    background-color: orange;
+    background-color: purple;
 }
 .pageContainer {
     width: 100%;
@@ -33,5 +33,11 @@ body {
 </head>
 <body>
     <div class="pageContainer"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            alert(window.innerHeight);
+            document.body.style.height = window.innerHeight + 'px';
+        });
+    </script>
 </body>
 </html>
