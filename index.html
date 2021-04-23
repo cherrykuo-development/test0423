@@ -41,7 +41,7 @@ body {
             }
             setBodyHeight();
             window.onresize = setBodyHeight;
-            window.addEventListener('deviceorientation', () => {
+            window.addEventListener('orientationchange', () => {
                 alert('cherry');
             })
         });
