@@ -21,13 +21,13 @@ html {
     background-color: red;
 }
 body {
-    background-color: purple;
+    background-color: grey;
 }
 .pageContainer {
     width: 100%;
     height: 100%;
     background-color: lightblue;
-    position: fixed;
+    /* position: fixed; */
 }
 </style>
 </head>
@@ -35,8 +35,12 @@ body {
     <div class="pageContainer"></div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            alert(window.innerHeight);
-            document.body.style.height = window.innerHeight + 'px';
+            const setBodyHeight = () => {
+                console.log('resize');
+                document.body.style.height = window.innerHeight + 'px';
+            }
+            setBodyHeight();
+            window.onresize = setBodyHeight;
         });
     </script>
 </body>
